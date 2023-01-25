@@ -1,0 +1,17 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPattern": "/k6/test/get"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "performanceGet.json",
+        "headers": {
+            "Content-Type": "application/json; charset-UTF-8",
+            "Connection": "keep-alive",
+            "Transfer-Enconding": "chunked"
+        },
+    "transformers": ["response-template"],
+    "fixedDelayMilliseconds": 1000
+    }
+}

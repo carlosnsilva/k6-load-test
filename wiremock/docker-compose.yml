@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  wiremock:
+      image: wiremock/wiremock
+      ports:
+        - 8080:8080
+      volumes:
+        - ./config/:/home/wiremock
+      command:
+        - -verbose
+        - -global-response-templating
+        - -disable-gzip
+        - -enable-stub-cors
+ 
